@@ -1,0 +1,8 @@
+train_test_split = split_synthea_test
+header = header
+sherlock_feature = test_synthea_test_sherlock
+
+epoch = 2
+batch_size = 100
+
+model_name = test_sherlock

@@ -1,0 +1,12 @@
+MAX_COL_COUNT = 30
+batch_size = 10
+train_test_split = split_synthea_test
+header = header
+feature = test_synthea_test_sherlock
+
+epoch  = 2
+patience = 5
+
+pre_trained_sherlock_path = test_sherlock.pt
+
+model_name = test_CRF
