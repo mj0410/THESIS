@@ -1,4 +1,4 @@
-export BASEPATH=C:/Users/minie/Desktop/thesis_scripts/semantic_type_detection
+export BASEPATH=path_to/semantic_type_detection
 
 cd $BASEPATH
 
