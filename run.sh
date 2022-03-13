@@ -1,18 +1,18 @@
-export ORIGIN=C:/Users/minie/Desktop/thesis_scripts
-export BASEPATH=C:/Users/minie/Desktop/thesis_scripts/semantic_type_detection
+export ORIGIN=path_to_models
+export BASEPATH=$ORIGIN/semantic_type_detection
 
 export DT_MODEL_DIR=$ORIGIN/table_orientation/model
-export INPUT_DIR=C:/Users/minie/Desktop/FU/Thesis/Synthea/100/csv_test_rcol_test
+export INPUT_DIR=path_to_input_tables
 
 export SHERLOCKPATH=$BASEPATH/sherlock
 export EXTRACTPATH=$BASEPATH/extract
 
 export TYPENAME='syntheaB'
 export LDANAME='t18_rcol'
-export DTOUTPUT='synthea100_csv_test_rcol_test'
+export DTOUTPUT='deeptable_output'
 
 cd $ORIGIN/table_orientation
-python DeepTablePred.py -m $DT_MODEL_DIR/model_100.hdf5 -i $INPUT_DIR -o $DTOUTPUT
+python DeepTablePred.py -m $DT_MODEL_DIR/pretrained_DeepTableModel_name -i $INPUT_DIR -o $DTOUTPUT
 
 while true
 do
@@ -21,7 +21,7 @@ do
 
   if [[ "$ans" == "y" ]] || [[ "$ans" == "yes" ]]; then
     cd $BASEPATH/model
-    python pred_CRF.py -dt $DTOUTPUT -n 50 -m CRF_rcol_t18_50-fold -o t18_rcol_csv_test_newscripts -t $LDANAME
+    python pred_CRF.py -dt $DTOUTPUT -n 50 -m pretrained_CRFmodel_name -o name_of_output -t $LDANAME
     break
   elif [[ "$ans" == "n" ]] || [[ "$ans" == "no" ]]; then
     echo "quit"
