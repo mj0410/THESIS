@@ -1,5 +1,5 @@
 MAX_COL_COUNT = 30
-batch_size = 10
+batch_size = 512
 train_test_split = split_file_name
 header = header_file_name
 feature = feature_file_name
