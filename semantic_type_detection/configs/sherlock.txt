@@ -1,8 +1,8 @@
-train_test_split = split_synthea_test
-header = header
-sherlock_feature = test_synthea_test_sherlock
+train_test_split = split_file_name
+header = header_file_name
+sherlock_feature = feature_file_name
 
-epoch = 2
-batch_size = 100
+epoch = 50
+batch_size = 512
 
-model_name = test_sherlock
+model_name = sherlock
