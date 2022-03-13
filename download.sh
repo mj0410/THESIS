@@ -1,3 +1,5 @@
+# download pretrained sherlock model features provided by Zhang et al.
+
 export BASEPATH=path_to/semantic_type_detection
 
 cd $BASEPATH
