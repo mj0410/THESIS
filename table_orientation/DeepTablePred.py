@@ -26,9 +26,9 @@ if __name__ == "__main__":
 	output = args.output
 	
 	# variable initialization
-	MAX_COL=9
-	MAX_COL_LENGTH=9
-	MAX_CELL_LENGTH=4
+	MAX_COL=10
+	MAX_COL_LENGTH=10
+	MAX_CELL_LENGTH=5
 
 	input_list = listdir(inp)
 
