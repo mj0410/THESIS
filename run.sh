@@ -8,7 +8,7 @@ export SHERLOCKPATH=$BASEPATH/sherlock
 export EXTRACTPATH=$BASEPATH/extract
 
 export TYPENAME='syntheaB'
-export LDANAME='t18_rcol'
+export LDANAME='t18'
 export DTOUTPUT='deeptable_output'
 
 cd $ORIGIN/table_orientation
