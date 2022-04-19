@@ -127,9 +127,9 @@ if __name__ == "__main__":
 	emb_vec = args.embedding
 
 	# variable initialization
-	MAX_COL = 9
-	MAX_COL_LENGTH = 9
-	MAX_CELL_LENGTH = 4
+	MAX_COL = 10
+	MAX_COL_LENGTH = 10
+	MAX_CELL_LENGTH = 5
 	embedding_flag = 1
 
 	# read train samples
