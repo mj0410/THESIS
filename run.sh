@@ -11,8 +11,22 @@ export TYPENAME='syntheaB'
 export LDANAME='t18'
 export DTOUTPUT='deeptable_output'
 
-cd $ORIGIN/table_orientation
-python DeepTablePred.py -m $DT_MODEL_DIR/pretrained_DeepTableModel_name -i $INPUT_DIR -o $DTOUTPUT
+while true
+do
+  echo "Run table orientation classification YES[y] NO[n]"
+  read ans
+  
+  if [[ "$ans" == "y" ]] || [[ "$ans" == "yes" ]]; then
+    cd $ORIGIN/table_orientation
+    python DeepTablePred.py -m $DT_MODEL_DIR/pretrained_DeepTableModel_name -i $INPUT_DIR -o $DTOUTPUT
+    break
+  elif [[ "$ans" == "n" ]] || [[ "$ans" == "no" ]]; then
+    echo "quit"
+    break
+  else
+    echo "please enter yes/y or no/n"
+  fi
+done
 
 while true
 do
